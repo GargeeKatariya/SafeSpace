@@ -25,8 +25,13 @@ const db = new Database(process.env.MONGODB_URI, {
 db.connect().catch((err) =>
   console.error("Error connecting to database:", err)
 );
-
-app.use(cors());
+app.use(cors(
+  {
+    orgin: ["https://deploy-mern-1whq.vercel.app"],
+    methods: ["POST", "GET"],
+    credentials: true
+  }
+));
 app.use(morgan("dev"));
 app.use("/assets/userFiles", express.static(__dirname + "/assets/userFiles"));
 app.use(

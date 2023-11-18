@@ -4,9 +4,11 @@
   "description": "A social networking platform",
   "main": "app.js",
   "scripts": {
+    "build": "react-scripts build",
     "test": "echo \"Error: no test specified\" && exit 1",
     "start": "nodemon app.js",
-    "production": "node app.js"
+    "production": "node app.js",
+    "eject": "react-scripts eject"
   },
   "author": "Neaz",
   "license": "ISC",
@@ -41,6 +43,19 @@
     "husky": "^7.0.4",
     "jest": "^27.4.5",
     "nodemon": "^2.0.20",
-    "prettier": "2.8.7"
+    "prettier": "2.8.7",
+    "react-scripts": "^5.0.1"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
   }
 }
