@@ -8,7 +8,7 @@ import CommonLoading from "../loader/CommonLoading";
 
 import {
   useBannerLoading,
-  useIsModeratorUpdated,
+  
 } from "../../hooks/useCommunityData";
 import { HiUserGroup, HiOutlineCheckBadge } from "react-icons/hi2";
 
@@ -38,7 +38,6 @@ const Rightbar = () => {
   );
 
   const bannerLoaded = useBannerLoading(banner);
-  const isModeratorUpdated = useIsModeratorUpdated(isModeratorOfThisCommunity);
 
   if (!communityData) {
     return (
@@ -90,7 +89,7 @@ const Rightbar = () => {
           </Link>
         )}
 
-        {isModeratorUpdated && !isModeratorOfThisCommunity && (
+        { !isModeratorOfThisCommunity && (
           <button
             onClick={toggleLeaveModal}
             className="px-4 shadow-md shadow-red-50 text-sm py-1 border border-red-400 hover:text-white hover:bg-red-400 text-red-400 rounded-md flex justify-center items-center w-full my-2"

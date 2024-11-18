@@ -5,7 +5,7 @@ import authReducer from "./auth";
 import communityReducer from "./community";
 import moderationReducer from "./moderation";
 import userReducer from "./user";
-import adminReducer from "./admin";
+
 
 const rootReducer = combineReducers({
   posts: postsReducer,
@@ -13,7 +13,7 @@ const rootReducer = combineReducers({
   community: communityReducer,
   moderation: moderationReducer,
   user: userReducer,
-  admin: adminReducer,
+  
 });
 
 export default rootReducer;

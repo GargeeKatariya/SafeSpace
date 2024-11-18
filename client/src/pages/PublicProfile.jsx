@@ -26,9 +26,6 @@ const PublicProfile = () => {
   const userData = useSelector((state) => state.auth?.userData);
   const userProfile = useSelector((state) => state.user?.publicUserProfile);
   const isUserFollowing = useSelector((state) => state.user?.isFollowing);
-  const isModerator = useSelector(
-    (state) => state.auth?.userData?.role === "moderator"
-  );
 
   const publicUserId = location.pathname.split("/")[2];
 
@@ -133,7 +130,7 @@ const PublicProfile = () => {
               onClick={() => handleUnfollow(publicUserId)}
               name={name}
             />
-            {!isModerator && !isFollowing && (
+            {!isFollowing && (
               <FollowButton
                 loading={followLoading}
                 onClick={() => handleFollow(publicUserId)}
@@ -151,11 +148,7 @@ const PublicProfile = () => {
             <CiLocationOn className="text-lg" />
             {userLocation === "" ? "N/A" : userLocation}
           </p>
-          {role === "moderator" ? (
-            <p className="rounded-md bg-sky-200 px-2 py-1 text-center text-sm font-semibold text-sky-700">
-              Moderator
-            </p>
-          ) : null}
+          
         </div>
         <div>
           <p>{bio}</p>
@@ -187,7 +180,7 @@ const PublicProfile = () => {
           30 days
         </p>
 
-        {isFollowing && role !== "moderator" ? (
+        {isFollowing  ? (
           <>
             {totalFollowers === 1 ? (
               <p className="flex items-center gap-2">

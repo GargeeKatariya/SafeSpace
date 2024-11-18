@@ -121,23 +121,7 @@ export const signInAction = (formData, navigate) => async (dispatch) => {
   }
 };
 
-export const getModProfileAction = () => async (dispatch) => {
-  try {
-    const { error, data } = await api.getModProfile();
-    if (error) {
-      throw new Error(error);
-    }
-    dispatch({
-      type: types.GET_MOD_PROFILE_SUCCESS,
-      payload: data,
-    });
-  } catch (error) {
-    dispatch({
-      type: types.GET_MOD_PROFILE_FAIL,
-      payload: types.ERROR_MESSAGE,
-    });
-  }
-};
+
 
 export const getContextAuthDataAction = () => async (dispatch) => {
   try {

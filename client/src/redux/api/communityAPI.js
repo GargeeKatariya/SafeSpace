@@ -93,17 +93,6 @@ export const getCommunityMembers = async (communityName) => {
   }
 };
 
-export const getCommunityMods = async (communityName) => {
-  try {
-    const { data } = await COMMUNITY_API.get(
-      `/communities/${communityName}/moderators`
-    );
-    return { error: null, data };
-  } catch (error) {
-    return handleApiError(error);
-  }
-};
-
 export const banUser = async (communityName, userId) => {
   try {
     const { data } = await COMMUNITY_API.post(

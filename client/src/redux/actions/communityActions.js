@@ -221,30 +221,6 @@ export const getComMembersAction = (communityName) => async (dispatch) => {
   }
 };
 
-export const getComModsAction = (communityName) => async (dispatch) => {
-  try {
-    const { error, data } = await api.getCommunityMods(communityName);
-    if (error) {
-      throw new Error(error);
-    }
-    dispatch({
-      type: types.GET_COMMUNITY_MODS_SUCCESS,
-      payload: data,
-      meta: {
-        requiresAuth: true,
-      },
-    });
-  } catch (error) {
-    dispatch({
-      type: types.GET_COMMUNITY_MODS_FAIL,
-      payload: error.message,
-      meta: {
-        requiresAuth: true,
-      },
-    });
-  }
-};
-
 export const banUserAction = (communityName, userId) => async (dispatch) => {
   try {
     const { error } = await api.banUser(communityName, userId);

@@ -42,14 +42,6 @@ export const logout = async () => {
   }
 };
 
-export const getModProfile = async () => {
-  try {
-    const res = await API.get("/users/moderator");
-    return { error: null, data: res.data };
-  } catch (error) {
-    return handleApiError(error);
-  }
-};
 
 export const getContextAuthData = async () => {
   try {

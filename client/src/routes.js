@@ -13,7 +13,7 @@ import Following from "./pages/Following";
 import SignUp from "./pages/SignUp";
 
 const ReportedPost = lazy(() => import("./pages/ReportedPost"));
-const Moderator = lazy(() => import("./pages/Moderator"));
+
 const DevicesLocations = lazy(() => import("./pages/DevicesLocations"));
 const VerifyEmail = lazy(() => import("./pages/VerifyEmail"));
 const EmailVerifiedMessage = lazy(() => import("./pages/EmailVerifiedMessage"));
@@ -50,10 +50,6 @@ export const privateRoutes = [
   {
     path: "/community/:communityName/reported-post",
     element: <ReportedPost />,
-  },
-  {
-    path: "/community/:communityName/moderator",
-    element: <Moderator />,
   },
   {
     path: "/saved",

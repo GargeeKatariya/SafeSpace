@@ -130,13 +130,13 @@ body {
     transform: rotate(-360deg);
   }
 }
-.admin-loader {
+/* .admin-loader {
   width: 84px;
   height: 84px;
   position: relative;
   overflow: hidden;
-}
-.admin-loader:before,
+} */
+/* .admin-loader:before,
 .admin-loader:after {
   content: "";
   position: absolute;
@@ -151,7 +151,7 @@ body {
 }
 .admin-loader:after {
   animation-delay: 1s;
-}
+} */
 @keyframes push {
   0% {
     transform: translate(-50%, 100%) scale(1);

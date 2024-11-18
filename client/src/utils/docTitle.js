@@ -9,7 +9,6 @@ const titleMap = {
   "/communities": "Communities",
   "/my-communities": "My Communities",
   "/following": "Following",
-  "/devices-locations": "Devices & Locations",
   "/verify-email": "Verify Email",
   "/email-verified": "Email Verified",
   "/block-device": "Block Device",
